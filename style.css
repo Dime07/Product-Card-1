@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html{
+    width: 100%;
+    height: 100vh;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+    min-height: 100vh;
+}
+
+h2{
+    color: rgb(20, 20, 20);
+}
+
+.card{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30%;
+    height: 300px;
+    border-radius: 20px;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+    background-color: rgb(15, 15, 15);
+    overflow: hidden;
+    box-shadow: 5px 10px 18px #1818188f;
+}
+
+.card::before{
+    content: '';
+    background-color: rgb(255, 104, 230);
+    position: absolute;
+    transform: skewY(340deg);
+    transition: 0.5s;
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    left: 0;
+}
+
+.card:hover::before{
+    transform: skewY(390deg);
+}
+
+.card img{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0;
+    width: 100%;
+    margin-top: 50px;
+    transition: 0.5s;
+}
+
+.card:hover img{
+    width: 70%;
+    margin-top: 20px;
+}
+
+.card button{
+    position: absolute;
+    left: 0;
+    bottom: -30%;
+    margin-bottom: 2px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: rgb(238, 71, 210);
+    color: rgb(20, 20, 20);
+}
+
+.card button:hover{
+    background-color: rgb(173, 33, 150);
+}
+
+.card:hover button{
+    bottom: 5%;
+}
+
+.card p {
+    letter-spacing: 1px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -50%;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.card:hover p{
+    bottom: 20%;
+}
